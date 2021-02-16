@@ -1,0 +1,82 @@
+
+#root{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 85vh;
+}
+
+.logo{
+    height: 200px;
+    width: 200px;
+}
+
+.email-label , .pass-label {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+   
+}
+
+
+.email, .password {
+    margin-bottom: 30px;
+    height: 35px;
+    width: 50%;
+    background: rgba(255, 255, 255, .5);
+    outline: 0px;
+    border: 0px; 
+    border-radius: 20px;
+    padding-left: 15px;
+    font-size: 23px;
+    caret-color:rgba(255, 255, 255, .5) ;
+}
+
+.button{
+    width: 20%;
+    height: 40px;
+    background: #124be7;
+    border: 0px;
+    border-radius: 10px;
+    outline: 0px;
+    color: white;
+    font-size: 24px;
+}
+
+.signin {
+    width: 30vw;
+    height: 40vh;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    background: inherit;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .signin:before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    filter: blur(10px);
+    margin: -20px;
+  }
