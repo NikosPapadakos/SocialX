@@ -1,0 +1,344 @@
+
+
+div .nav-container {
+    position: relative;
+    background-color: black;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.second-menu {
+    display: none;
+}
+
+.logo {
+    margin-left: 20px;
+    width: 90px;
+    height: 90px;
+}
+
+
+
+.search-bar {
+    padding-left: 10px;
+    background-color:white;
+    border-radius: 30px;
+    outline-width: 0;
+    font-size: 20px; 
+    border: none;
+    width: 100%;
+}
+
+.search-container {
+    margin-left: 10px;
+  border: 1px black solid;
+  height: 40px;
+  width: 20vw;
+  background-color: white;
+  border-radius: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.left-col {
+ 
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.mid-options {
+    position: absolute;
+    left: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-options {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar {
+    background-color: white;
+    border-radius: 100px;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+
+.username {
+    display: flex;
+    align-items: center;
+    color:white;
+    margin-right: 20px;
+}
+
+
+.home {
+    width: 80px;
+    height: 80px;
+}
+
+.chat {
+    height: 60px;
+    width: 60px;
+}
+
+.bell {
+    height: 40px;
+    width: 40px;
+}
+
+.menu {
+    height: 40px;
+    width: 40px;
+}
+
+
+@media only screen and (max-width: 960px) {
+   
+    div .nav-container {
+        
+       
+        height: 60px;
+       
+      
+    }
+
+.logo {
+    margin-left: 10px;
+    width: 65px;
+    height: 65px;
+}
+
+
+
+.search-bar {
+    padding-left: 10px;
+    font-size: 16px;  
+}
+
+.search-container {
+    margin-left: 10px;
+  border: 1px black solid;
+  height: 30px;
+  width: 20vw;
+  background-color: white;
+  border-radius: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.left-col {
+ 
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.mid-options {
+    position: absolute;
+    left: 45%;
+    
+}
+
+
+
+.avatar {
+    background-color: white;
+    border-radius: 100px;
+    height: 35px;
+    width: 35px;
+    margin-right: 10px;
+}
+
+.username {
+    display: flex;
+    align-items: center;
+    color:white;
+    margin-right: 20px;
+}
+
+
+.home {
+    width: 60px;
+    height: 60px;
+}
+
+.chat {
+    height: 35px;
+    width: 35px;
+}
+
+.bell {
+    height: 35px;
+    width: 40px;
+}
+
+.menu {
+    height: 35px;
+    width: 35px;
+}
+  }
+
+
+  @media only screen and (max-width: 700px) {
+   
+    div .nav-container {
+        
+       
+        height: 50px;
+       
+      
+    }
+
+.logo {
+    margin-left: 10px;
+    width: 55px;
+    height: 55px;
+}
+
+
+
+.optic {
+    height: 25px;
+    width: 20px;
+}
+
+.search-container {
+    margin-left: 10px;
+  border: 1px black solid;
+  height: 30px;
+  width: 23vw;
+  background-color: white;
+  border-radius: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.left-col {
+ 
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.mid-options {
+    position: absolute;
+    left: 45%;
+    
+}
+
+
+
+.avatar {
+    background-color: white;
+    border-radius: 100px;
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}
+
+.username {
+    display: flex;
+    align-items: center;
+    color:white;
+    margin-right: 20px;
+    font-size: 13px;
+}
+
+
+.home {
+    width: 50px;
+    height: 50px;
+}
+
+.chat {
+    height: 30px;
+    width: 30px;
+}
+
+.bell {
+    height: 30px;
+    width: 30px;
+}
+
+.menu {
+    height: 30px;
+    width: 30px;
+}
+  }  
+
+
+
+
+  @media only screen and (max-width: 560px) {
+   
+    div .nav-container {
+        height: 50px;
+    }
+
+.logo {
+    margin-left: 10px;
+    width: 60px;
+    height: 60px;
+}
+
+.left-col {
+    width: 100%;
+}
+
+.search-bar {
+    padding-left: 10px;
+    font-size: 16px;  
+}
+
+.search-container {
+    margin-left: 10px;
+  border: 1px black solid;
+  height: 30px;
+  width: 100%;
+  background-color: white;
+  border-radius: 30px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.mid-options {
+  display: none;
+    
+}
+
+
+
+.right-options {
+    display: none;
+}
+
+.second-menu {
+    display: block;
+    margin-right: 20px;
+    margin-left: 10px;
+    height: 40px;
+    width: 40px;
+}
+
+  }
