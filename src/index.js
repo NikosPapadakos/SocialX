@@ -6,10 +6,11 @@ import Homepage from './components/Homepage';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Homepage />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <Homepage />
+    </React.StrictMode>,
+    // eslint-disable-next-line no-undef
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

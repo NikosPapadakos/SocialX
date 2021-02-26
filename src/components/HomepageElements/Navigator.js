@@ -1,8 +1,8 @@
 import React from 'react';
 import '../../css/nav.css';
-import logo from '../../assets/socialx.png'
-import home from '../../assets/home.png'
-import { BiChat, BiSearch, BiBell, BiMenu } from "react-icons/bi";
+import logo from '../../assets/socialx.png';
+import home from '../../assets/home.png';
+import { BiChat, BiSearch, BiBell, BiMenu } from 'react-icons/bi';
 
 
 export default function Navigator() {
@@ -19,25 +19,19 @@ export default function Navigator() {
             </span>
 
 
+            <span className="mid-options">
+                <img className="home"  src={home}></img>
+                <BiChat className="chat" color="white"/>
+            </span>
 
-
-            
-
-
-            
-                <span className="mid-options">
-                    <img className="home"  src={home}></img>
-                    <BiChat className="chat" color="white"/>
-                </span>
-
-                <span className="right-options">
+            <span className="right-options">
                 <spa className="username"><img className="avatar"></img> Username</spa>
                 <BiBell className="bell" color="white" style={{ marginRight: '10' }}  />
                 <BiMenu className="menu" color="white" style={{ marginRight: '20' }}  />
-                </span>
+            </span>
 
-                <BiMenu className="second-menu" color="white"/>
+            <BiMenu className="second-menu" color="white"/>
         </div>
 
-    )
+    );
 }

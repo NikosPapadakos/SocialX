@@ -2,14 +2,15 @@ import React from 'react';
 import Nav from './HomepageElements/Navigator';
 import Main from './HomepageElements/Main';
 import Friends from './HomepageElements/Friends';
-import SignIn from './SignIn'
+import SignIn from './SignIn';
+import SignUp from './SignUp';
 import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
-  } from "react-router-dom";
-import  '../css/homepage.css'
+} from 'react-router-dom';
+import  '../css/homepage.css';
+
 
 export default function Homepage() {
     return (
@@ -18,9 +19,12 @@ export default function Homepage() {
                 <Route path="/signin">
                     <SignIn/>
                 </Route>
-                <Route path="/homepage">
+                <Route path="/signup">
+                    <SignUp/>
+                </Route>
+                <Route path="/">
                     <div className="home-container">
-                            <Nav/>
+                        <Nav/>
                         <div className="main-container">
                             <Main/>
                             <Friends/>
@@ -29,5 +33,5 @@ export default function Homepage() {
                 </Route>
             </Switch>
         </Router>
-    )
+    );
 }
