@@ -20,7 +20,7 @@
     width: 200px;
 }
 
-.email-label , .pass-label {
+.email-label , .pass-label, .username-label {
     color: white;
     font-size: 20px;
     font-weight: 500;
@@ -28,7 +28,7 @@
 }
 
 
-.email, .password {
+.email, .password, .username-input {
     margin-bottom: 30px;
     height: 35px;
     width: 50%;

@@ -47,7 +47,6 @@
     "babel-install": "2.1.0",
     "eslint": "^7.20.0",
     "eslint-plugin-react": "^7.22.0",
-    "webpack": "^5.24.2",
     "webpack-cli": "^4.5.0"
   }
 }

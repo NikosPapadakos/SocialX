@@ -7,14 +7,16 @@
 
     include_once '../Classes/Responses.php';
 
-    if(!(isset($_POST['id']))) fail('Id missing.'); 
+    if(!(isset($_POST['username'])) || !(isset($_POST['email'])) || !(isset($_POST['password']))) fail('Parameters missing.');
 
     include_once '../Classes/User.php';
 
     $user = new User();
 
-    $user->id = $_POST['id'];
+    $user->username = $_POST['username'];
+    $user->email = $_POST['email'];
+    $user->password = md5($_POST['password']);
 
-    $data = $user->getUser();
+    $user->authenticateUser() ? fail('User already exists.') : '';
 
-    !empty($data) ? success('User retrieved successfully.', $data) : fail('User not found.') ;
+    $user->createUser() ? success('User created successfully.') : fail('User creation failed.');
