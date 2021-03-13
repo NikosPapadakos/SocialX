@@ -10,11 +10,17 @@
     if(!(isset($_POST['username'])) && !(isset($_POST['email'])) || !(isset($_POST['password']))) fail('Parameters missing.');
 
     include_once '../Classes/User.php';
+    include_once '../Classes/Token.php';
 
     $user = new User();
+    $token = new Token();
 
-    $user->username = isset($_POST['username']) ? $_POST['username'] : '';
-    $user->email = isset($_POST['email']) ? $_POST['email'] : '';
+    $user->username = isset($_POST['username']) ? $_POST['username'] : null;
+    $user->email = isset($_POST['email']) ? $_POST['email'] : null;
     $user->password = md5($_POST['password']);
+    
+    $user->authenticateUser() ? null : fail('User does not exist.');
 
-    $user->authenticateUser() ? success('User exists.') : fail('User does not exist.');
+    $jwt = $token->create($user->id, $user->username, $user->email, $user->password);
+
+    $jwt ? success('User authenticated successfully', $jwt) : fail('JWT failed to create.');

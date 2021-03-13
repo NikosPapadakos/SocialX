@@ -37,7 +37,8 @@
             $stmt->bindParam(":password", $this->password);
         
             if($stmt->execute()){
-               return true;
+               return $this->conn->lastInsertId();
+
             }
             return false;
         }
@@ -76,24 +77,33 @@
 
 
         public function authenticateUser() {
-            $query = "SELECT id 
+            $query = $this->email == null ? 
+             "SELECT id 
                       FROM ". $this->table ."
                       WHERE
-                        username=:username 
-                        OR 
-                        email = :email
-                        AND
-                        password = :password";
+                      password = :password 
+                      AND 
+                      username = :username" :
+             "SELECT id 
+                      FROM ". $this->table ."
+                      WHERE
+                      password = :password 
+                      AND 
+                      email = :email";
 
             $stmt = $this->conn->prepare($query);
 
             $stmt->bindParam(':password', $this->password);
-            $stmt->bindParam(':username', $this->username);
-            $stmt->bindParam(':email', $this->email);
+            $this->email == null ? $stmt->bindParam(':username', $this->username) : $stmt->bindParam(':email', $this->email);
+            
 
             $stmt->execute(); 
 
-            if($stmt->rowCount()) return true;
+            if($stmt->rowCount()){
+                $row = $stmt->fetch(PDO::FETCH_ASSOC);
+                $this->id = $row['id'];
+                return true;
+            } 
 
             return false;
         }

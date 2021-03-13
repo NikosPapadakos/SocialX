@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Homepage from './components/Homepage';
+import Homepage from './components/Navigator';
 
 import reportWebVitals from './reportWebVitals';
 

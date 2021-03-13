@@ -25,7 +25,7 @@ export default function Navigator() {
             </span>
 
             <span className="right-options">
-                <spa className="username"><img className="avatar"></img> Username</spa>
+                <span className="username"><img className="avatar"></img> Username</span>
                 <BiBell className="bell" color="white" style={{ marginRight: '10' }}  />
                 <BiMenu className="menu" color="white" style={{ marginRight: '20' }}  />
             </span>
