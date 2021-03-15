@@ -37,7 +37,7 @@ export default function Navigator({data}) {
             text: 'Do you want to log out?',
             icon: 'warning',
             buttons: ['No', 'Yes'],
-            
+            className: 'logOut-modal'
         })
             .then((value)=>
                 value ? logOut():null
@@ -63,7 +63,7 @@ export default function Navigator({data}) {
             <span className='right-options'>
                 <span className='username'><img className='avatar'></img>{username}dfewfefewfefefw</span>
                 <BiBell className='bell' color='white' style={{ marginRight: '10' }}  />
-                <BiLogOut onClick={()=>logOutModal()} className='menu' color='white' style={{ marginRight: '20' }}  />
+                <BiLogOut onClick={()=>logOutModal()} className='log-out' color='white' style={{ marginRight: '20' }}  />
             </span>
 
             <BiMenu className='second-menu' color='white'/>

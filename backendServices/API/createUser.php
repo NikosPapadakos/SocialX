@@ -27,6 +27,8 @@
 
 
     $user->authenticateUser() ? fail('User already exists.') : '';
+    $user->checkIfEmailExists() ? fail('Email does exist.') : success('Email doesn\'t exist.') ;
+    $user->checkIfUsernameExists() ? fail('Username does exist.') : success('Username doesn\'t exist.') ;
     $id =  $user->createUser();
     $id ? $user->id = $id : fail('User creation failed.');
 

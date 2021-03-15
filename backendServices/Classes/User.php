@@ -110,8 +110,8 @@
 
         public function checkIfEmailExists () {
             $query = "SELECT id 
-                        FROM". $this->table. "
-                        WHERE 
+                        FROM ". $this->table. "
+                         WHERE 
                         email=:email";
             
             $stmt = $this->conn->prepare($query);
@@ -130,19 +130,16 @@
         }
 
         public function checkIfUsernameExists () {
-            $query = "SELECT * 
-                        FROM". $this->table. "
-                        WHERE 
-                        username=:username";
+            $query = "SELECT * FROM ". $this->table. " WHERE username=:username";
             
             $stmt = $this->conn->prepare($query);
 
-            $stmt->bindParam(':username', $this->username);
+            $stmt->bindParam(':username', $this->username, PDO::PARAM_STR);
 
             $stmt->execute(); 
-
+         
             if($stmt->rowCount() > 0){
-                echo $stmt->rowCount();
+         
                 return true;
             }else{
                 return false;

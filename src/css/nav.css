@@ -13,7 +13,7 @@ div .nav-container {
     border-bottom-right-radius: 30px;
 }
 
-.swal-modal {
+.logOut-modal {
     background-color: rgba(255, 255, 255, .5);
     border: 3px solid white;
   }
@@ -24,7 +24,6 @@ div .nav-container {
   }
 
   .swal-button--confirm:hover {
-  
     background-color: rgb(255, 0, 242)!important;
    }
 
@@ -119,7 +118,7 @@ div .nav-container {
     cursor: pointer;
 }
 
-.menu {
+.log-out {
     height: 40px;
     width: 40px;
     transform:rotate(180deg);
@@ -209,7 +208,7 @@ div .nav-container {
     width: 40px;
 }
 
-.menu {
+.log-out {
     height: 35px;
     width: 35px;
    
@@ -307,7 +306,7 @@ div .nav-container {
     width: 30px;
 }
 
-.menu {
+.log-out {
     height: 30px;
     width: 30px;
 }

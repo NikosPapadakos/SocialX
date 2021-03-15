@@ -16,4 +16,4 @@
  
     $user->username =  $_POST['username'] ;
     
-    $user->checkIfUsernameExists() == true ? fail('Username does exist.') : success('Username doesn\'t exist.') ;
+    $user->checkIfUsernameExists()  ? fail('Username does exist.') : success('Username doesn\'t exist.') ;
