@@ -124,7 +124,7 @@ export default function SignUp() {
                 <input placeholder='example@email.com' onChange={()=>handleEmail()} className={emailClass == 0 ? 'email' : `email ${emailClass}`} type='text'/>
                 <small className={emailMsg == 'Looks good!' ? 'emailMsg correctMsg' : 'emailMsg incorrectMsg'}>{emailMsg}</small> 
                 <label className='username-label'>Username</label>
-                <input placeholder='UserExam_-23' onChange={()=>handleUsername()} className={usernameClass == 0 ? 'username-input' : `username-input ${usernameClass}`} type='text'/>
+                <input placeholder='eg. John-Doe_23' onChange={()=>handleUsername()} className={usernameClass == 0 ? 'username-input' : `username-input ${usernameClass}`} type='text'/>
                 <small className={usernameMsg == 'Looks good!' ? 'userMsg correctMsg' : 'userMsg incorrectMsg'}>{usernameMsg}</small> 
                 <label className='pass-label'>Password</label>
                 <input placeholder='eg. Password1!' onChange={()=>handlePassword()} className={passwordClass == 0 ? 'password' : `password ${passwordClass}`} type='password'/>

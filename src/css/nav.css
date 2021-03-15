@@ -1,6 +1,7 @@
 
 
 div .nav-container {
+    overflow: hidden;
     position: relative;
     background-color: black;
     height: 80px;

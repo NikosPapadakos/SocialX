@@ -48,4 +48,22 @@ class Token
 		}
 	}
 
+
+	function validate($jwt)
+	{
+
+		try {
+			// decode jwt
+			$decoded = JWT::decode($jwt, $this->key, array('HS256'));
+			//Check if token is expired
+			if ($decoded->exp < time())
+				return array("error_code" => 0, "error_message" => "Token expired");
+
+			//Valid
+			return array("error_code" => 1, "data" => $decoded->data); // show user details
+		} catch (Exception $e) {
+			return array("error_code" => 0, "error_message" => "Access denied", "error_catch" => $e->getMessage());
+		}
+	}
+
 }

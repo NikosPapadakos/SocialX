@@ -6,14 +6,21 @@
     header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
     include_once '../Classes/Responses.php';
+    include_once '../Classes/Token.php';
 
-    if(!(isset($_POST['id']))) fail('Id missing.'); 
+    $token = new Token();
 
+    $userData = $token->validate($_POST['token']);
+    $id = $userData['data']->id;
+   
+      if(empty($id)) fail('Id missing.'); 
+
+    
     include_once '../Classes/User.php';
 
     $user = new User();
 
-    $user->id = $_POST['id'];
+    $user->id = $id;
 
     $data = $user->getUser();
 

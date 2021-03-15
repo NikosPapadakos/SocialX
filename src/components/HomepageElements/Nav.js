@@ -1,12 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../../css/nav.css';
 import logo from '../../assets/socialx.png';
 import home from '../../assets/home.png';
 import { BiChat, BiSearch, BiBell, BiMenu } from 'react-icons/bi';
 
 
-export default function Navigator() {
-  
+
+
+Navigator.propTypes = {
+    data: PropTypes.object
+};
+
+
+export default function Navigator({data}) {
+   
+    console.log(data);
+
+    const {username} = data;
 
     return (
         <div className="nav-container">
@@ -25,7 +36,7 @@ export default function Navigator() {
             </span>
 
             <span className="right-options">
-                <span className="username"><img className="avatar"></img> Username</span>
+                <span className="username"><img className="avatar"></img>{username}</span>
                 <BiBell className="bell" color="white" style={{ marginRight: '10' }}  />
                 <BiMenu className="menu" color="white" style={{ marginRight: '20' }}  />
             </span>
