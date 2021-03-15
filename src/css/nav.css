@@ -13,6 +13,21 @@ div .nav-container {
     border-bottom-right-radius: 30px;
 }
 
+.swal-modal {
+    background-color: rgba(255, 255, 255, .5);
+    border: 3px solid white;
+  }
+
+  .swal-button--confirm {
+   color: rgb(255, 251, 255);
+   background-color: rgb(212, 0, 255);
+  }
+
+  .swal-button--confirm:hover {
+  
+    background-color: rgb(255, 0, 242)!important;
+   }
+
 .second-menu {
     display: none;
 }
@@ -70,6 +85,7 @@ div .nav-container {
 }
 
 .avatar {
+    cursor: pointer;
     background-color: white;
     border-radius: 100px;
     height: 50px;
@@ -88,21 +104,26 @@ div .nav-container {
 .home {
     width: 80px;
     height: 80px;
+    cursor: pointer;
 }
 
 .chat {
     height: 60px;
     width: 60px;
+    cursor: pointer;
 }
 
 .bell {
     height: 40px;
     width: 40px;
+    cursor: pointer;
 }
 
 .menu {
     height: 40px;
     width: 40px;
+    transform:rotate(180deg);
+    cursor: pointer;
 }
 
 
@@ -191,9 +212,17 @@ div .nav-container {
 .menu {
     height: 35px;
     width: 35px;
+   
 }
   }
 
+
+  @media only screen and (max-width: 960px) {
+    .mid-options{
+        display: none;
+    }
+
+  }
 
   @media only screen and (max-width: 700px) {
    

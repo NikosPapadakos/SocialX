@@ -41,15 +41,36 @@ export default function SignUp() {
 
     const handleUsername = () => {
         let user = document.querySelector('.username-input').value;
-        if(user.length>2){
-            if(testUsername.test(user)){
-                setUsernameClass('correct');
-                setUsernameMsg('Looks good!');
+
+        let userForm = new FormData();
+        
+        userForm.append('username', user);
+        
+
+        axios.post(`${api}/checkUsername.php`, userForm).then(function (response) {
+            
+            if(response.data.status == 1){
+                if(user.length>2){
+                    if(testUsername.test(user)){
+                        setUsernameClass('correct');
+                        setUsernameMsg('Looks good!');
+                    }else{
+                        setUsernameClass('incorrect');
+                        setUsernameMsg('Username can contain alphanumeric and -_ char.');
+                    }
+                }
+                
             }else{
                 setUsernameClass('incorrect');
-                setUsernameMsg('Username can contain alphanumeric and -_ char.');
+                setUsernameMsg('Username already exists.');
             }
-        }else {
+        })
+            .catch(function (error) {
+                console.log(error);
+            });
+
+
+        if(user.length<3) {
             setUsernameClass('incorrect');
             setUsernameMsg('Username must be at least 3 characters long');
         }
@@ -60,6 +81,10 @@ export default function SignUp() {
     const handlePassword = () => {
         let pass = document.querySelector('.password').value;
         
+        
+
+
+
         if(pass.length>8){
             if(testPassword.test(pass)){
                 setPasswordClass('correct');

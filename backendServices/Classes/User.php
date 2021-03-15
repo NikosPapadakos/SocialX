@@ -108,4 +108,47 @@
             return false;
         }
 
+        public function checkIfEmailExists () {
+            $query = "SELECT id 
+                        FROM". $this->table. "
+                        WHERE 
+                        email=:email";
+            
+            $stmt = $this->conn->prepare($query);
+
+            $stmt->bindParam(':email', $this->email);
+
+            $stmt->execute(); 
+
+            if($stmt->rowCount() > 0){
+                return true;
+            } 
+                return false;
+            
+
+            
+        }
+
+        public function checkIfUsernameExists () {
+            $query = "SELECT * 
+                        FROM". $this->table. "
+                        WHERE 
+                        username=:username";
+            
+            $stmt = $this->conn->prepare($query);
+
+            $stmt->bindParam(':username', $this->username);
+
+            $stmt->execute(); 
+
+            if($stmt->rowCount() > 0){
+                echo $stmt->rowCount();
+                return true;
+            }else{
+                return false;
+            } 
+
+           
+        }
+
     }

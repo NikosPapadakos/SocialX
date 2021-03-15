@@ -47,6 +47,9 @@ export default function SignIn() {
      
     };
 
+
+   
+
     return (
     
         <div className='img-wrapper'>
@@ -54,10 +57,18 @@ export default function SignIn() {
             <div className='signIn-container'>
                 <header className='title-signin'>Sign In</header>
                 <label className='email-label'>Email or Username</label>
-                <input  className='email' type='text'/>
+                <input onKeyPress={event => {
+                    if (event.key === 'Enter') {
+                        _authenticateUser();
+                    }
+                }} className='email' type='text'/>
                 <label className='pass-label'>Password</label>
-                <input className='password' type='password'/>
-                <button onClick={()=>_authenticateUser()} className='button-signIn'>Sign In</button>
+                <input onKeyPress={event => {
+                    if (event.key === 'Enter') {
+                        _authenticateUser();
+                    }
+                }} className='password' type='password'/>
+                <button  onClick={()=>_authenticateUser()} className='button-signIn'>Sign In</button>
                 <h3 className={auth == 0 ? 'alert-hide' : 'alert'}>Invalid credentials</h3>
                 <Link className='signUp' to='/signup'>Don't have an account? Sign up!</Link>
             </div>
