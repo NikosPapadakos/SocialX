@@ -9,6 +9,7 @@
     z-index: 1;
     background: inherit;
     overflow: hidden;
+    
   }
 
   .feed-wrapper:before {
@@ -23,4 +24,49 @@
     box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
     filter: blur(10px);
     margin: -20px;
+  }
+
+  .neon {
+    color: rgb(175, 5, 226);
+    text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
+    font-family: -apple-system, 
+    BlinkMacSystemFont, 
+    "Segoe UI", 
+    Roboto, 
+    Oxygen-Sans, 
+    Ubuntu, 
+    Cantarell, 
+    "Helvetica Neue", 
+    sans-serif;
+  }
+
+  .feed-friends-toggle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .feed-btn, .friends-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(175, 5, 226);
+    color:white;
+    padding:10px;
+    
+  }
+
+  .feed-btn {
+    border-width: 10px;
+    border-right-color: rgb(250, 250, 250);
   }
