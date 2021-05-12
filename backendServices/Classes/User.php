@@ -1,7 +1,5 @@
 <?php
     include_once __DIR__ . '/../Config/Database.php';
-
-
     class User {
         private $conn;
         private $table = 'users';
